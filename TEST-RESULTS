@@ -1,0 +1,33 @@
+public class Main {
+    /**
+     * 
+     */
+    public static void testCalculate() {
+        List<Float> numbers = new ArrayList<>();
+        numbers.add(4.0f);
+        numbers.add(5.0f);
+        numbers.add(8.0f);
+
+        List<String> operations = new ArrayList<>();
+        operations.add("+");
+        operations.add("-");
+
+        Calculator.Calculate(numbers, operations);
+
+        // očekivani rezultat 4 + 5 - 8 = 1
+        float expected = 1.0f;
+
+        // provera da li je dobijeni rezultat jednak očekivanom
+        assert Calculator.finalResult == expected : "testCalculate: FAILED";
+    }
+}
+Ovaj test unosi 3 broja (4,5,8) i "+" i "-" operatore. Nakon što pozove metodu Calculate očekuje se rezultat 1 (4+5-8 = 1)
+Ako se dobijeni rezultat ne poklapa sa očekivnim test će dati poruku "testCalculate: FAILED"
+
+
+Drugi deo zadatka Testiranje prihvatljivosti:
+Na liniji 18  public static String ToString: Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.
+Na liniji 24 public static String Run(String expression): Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.
+Na liniji 70 String textResult = Float.toString(finalResult);: Immediately return this expression instead of assigning it to the temporary variable "textResult".
+Na liniji 74 private static void Calculate(List<Float> numbers, List<String> operations): Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.
+Na liniji 183 suvisan   return: Remove this redundant jump.
